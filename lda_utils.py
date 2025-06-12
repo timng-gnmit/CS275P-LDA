@@ -495,6 +495,7 @@ if __name__=="__main__":
     split = 0.8
     train_idx = np.random.permutation(np.arange(len(word_ids)))[:int(split*len(word_ids))]
 
+    # creating the empty lists
     train_word_ids = []
     train_word_cts = []
     test_word_ids = []
