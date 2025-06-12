@@ -64,7 +64,7 @@ from nltk.corpus import stopwords
 stop_words = stopwords.words('english')
 # getting rid of more stopwords because they don't mean anything and kept showing up
 stop_words.extend(['from', 'subject', 're', 'edu', 'use', 'said', 'would', 
-                   'also', 'one', 'could', 'bn', 'bbc', 'like', 'mr',
+                   'also', 'one', 'could', 'bn', 'bbc', 'like', 'mr', 'mrs',
                    'next', 'says', 'told', 'make', 'way', 'get', 'g',
                    'however'])
 
@@ -495,7 +495,6 @@ if __name__=="__main__":
     split = 0.8
     train_idx = np.random.permutation(np.arange(len(word_ids)))[:int(split*len(word_ids))]
 
-    # creating the empty lists
     train_word_ids = []
     train_word_cts = []
     test_word_ids = []
