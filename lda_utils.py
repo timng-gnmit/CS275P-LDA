@@ -473,7 +473,8 @@ class LDA:
             return
         # do E step
         gamma, _ = self.do_e_step(word_ids, word_cts)
-        return np.exp(dirichlet_expectation(gamma))
+        proportions = np.exp(dirichlet_expectation(gamma))
+        return proportions / proportions.sum(axis=1, keepdims=True)
         
 
 if __name__=="__main__":
