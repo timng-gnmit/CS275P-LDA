@@ -529,7 +529,7 @@ if __name__=="__main__":
 
     os.mkdir(lambdas_path)
 
-
+    # for each batch of training documents, performs an E-step followed by an M-step 
     for i in range(n_batches):
         print(f"batch [{i+1:3}/{n_batches}]")
         batch_ids = train_word_ids[i*batch_size:(i+1)*batch_size]
